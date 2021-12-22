@@ -58,7 +58,7 @@ def mf_sgd(R, K=64, alpha=1e-4, beta=1e-2, iterations=50):
             P[i] += alpha * (d * Q[j] - beta * P[i])
             Q[j] += alpha * (d * P[i] - beta * Q[j])
 
-        pred, training_loss = compute_training_loss(R, b, b_u, b_i, P, Q, iters, training_loss)
+        pred = compute_training_loss(R, b, b_u, b_i, P, Q, iters, training_loss)
 
     return pred, b, b_u, b_i, training_loss
 
@@ -71,7 +71,7 @@ def compute_training_loss(R, b, b_u, b_i, P, Q, iters, training_loss):
         error += d**2 
     RMSE = np.sqrt(error / len(users))
     training_loss.append((iters, RMSE))
-    return pred, training_loss
+    return pred
 
 
 def plot_training_loss(training_loss):
