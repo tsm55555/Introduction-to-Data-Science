@@ -88,7 +88,7 @@ def plot_training_loss(training_loss):
 
 
 if __name__ == "__main__":
-    data = pd.read_csv('ratings.csv')
+    data = pd.read_csv('/home/tsm62803/my_code/Introduction-to-Data-Science/Exercise 4/ratings.csv')
     table = pd.pivot_table(data, values='rating', index='userId', columns='movieId', fill_value=0)
     R = table.values
     
@@ -102,4 +102,3 @@ if __name__ == "__main__":
     print("Item bias:")
     print(b_i)
     plot_training_loss(loss)
-    
