@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-
+#grade: 100
 def mf_sgd(R, K=64, alpha=1e-4, beta=1e-2, iterations=50):
     """
     :param R: user-item rating matrix

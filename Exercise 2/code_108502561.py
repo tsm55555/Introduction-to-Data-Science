@@ -6,6 +6,7 @@ import math
 import numpy as np
 import pandas as pd
 
+#grade: 100
 
 class Node:
     "Decision tree node"
